@@ -1,0 +1,18 @@
+li {
+    /* Default styles here */
+    background-color: white;
+}
+
+.clicked {
+    background-color: darkcyan;
+}
+
+.form-select{
+    margin-top: 25px;
+}
+
+*{
+    background-color: lightblue;
+}
+  
+  
