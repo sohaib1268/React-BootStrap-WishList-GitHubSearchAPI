@@ -21,6 +21,10 @@ export default function List() {
     const handleChange = (event) =>{
        
         let x = getitemindex();
+        if(x < 0)
+        {
+            return false;
+        }
         let updatedWishListItems = [...wishListItems];
         updatedWishListItems[x].priority = event.target.value;
         addItemsToList(updatedWishListItems);
@@ -53,7 +57,6 @@ export default function List() {
         const liElements = document.querySelectorAll('li');
         const liElement = liElements[index];
   
-        // Remove the background color from all other li elements
         for(let i=0; i<liElements.length; i++)
         {
             if(i !== index)
@@ -62,7 +65,6 @@ export default function List() {
             }
         }
   
-        // Toggle the 'clicked' class on the clicked li element
         liElement.classList.toggle('clicked');
         
     };
